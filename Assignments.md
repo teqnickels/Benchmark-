@@ -1,11 +1,32 @@
 ## Specifications
 
 
-### 1: Guess The Number
+[X] ### 1: Guess The Number
 
 Write a program that will generate a number between 1 and 100. Your program will ask the user to guess the generated number.
 
 When the user types a guess, the program should tell them if they won (the guess matched the computer's number), if their guess was higher than the number the computer generated, OR if the guess was lower than the number the computer generated. Terminate the program if the user types "exit".
+
+### Solution:
+                var playerNumber = prompt("I'm thinking of a number between 1 and 100. Can you guess the number I'm thinking of?")
+
+                min = 1
+                max = 100
+                var randomize =  Math.random() * (max-min) + min;
+                var ourNumber  = Math.round(randomize)
+
+                while(ourNumber >= max) {
+                ourNumber--
+                }
+                while(ourNumber == min) {
+                ourNumber++
+                }
+
+                if (playerNumber == ourNumber) {
+                alert('Congratulations! You guessed the number we were thinking of!')
+                } else {
+                alert('Sorry, my number was' + ' ' + ourNumber)
+                }
 
 ---
 
