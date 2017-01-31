@@ -1,7 +1,7 @@
 ## Specifications
 
 
-[X] ### 1: Guess The Number
+### 1: Guess The Number [x]
 
 Write a program that will generate a number between 1 and 100. Your program will ask the user to guess the generated number.
 
