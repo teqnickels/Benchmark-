@@ -1,6 +1,6 @@
 
 
-# Benchmark-
+# Benchmark
 Benchmark goals are projects that are designed to be done solo.  The specs of a benchmark goal are designed to cover a wide
 range of basic concepts and get progressively more complex. The specs are immutable. Benchmark goals do not affect your stats.
 _______________________________________________________________________________________________________________________________
