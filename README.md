@@ -25,6 +25,11 @@ For the project review, make sure to schedule a 1:1 30 minute meeting the follow
 
 
 ---
+## Testing
+
+Come up with your own inputs and outputs (using the example inputs and outputs as well) and try to test with as many (reasonable) edge cases as you can.
+
+Write your tests using the assert module in Node or whatever testing library you feel most comfortable with.
 
 <!-- LICENSE -->
 
