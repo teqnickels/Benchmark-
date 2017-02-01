@@ -8,27 +8,40 @@ Write a program that will generate a number between 1 and 100. Your program will
 When the user types a guess, the program should tell them if they won (the guess matched the computer's number), if their guess was higher than the number the computer generated, OR if the guess was lower than the number the computer generated. Terminate the program if the user types "exit".
 
 ### Solution:
-                var playerNumber = prompt("I'm thinking of a number between 1 and 100. Can you guess the number I'm thinking of?")
+    let guessTheNumber = () => {
+    let playerNumber = prompt("I'm thinking of a number between 1 and 100. Can you guess the number I'm thinking of?")
 
-                min = 1
-                max = 100
-                var randomize =  Math.random() * (max-min) + min;
-                var ourNumber  = Math.round(randomize)
+    const min = 1
+    const max = 100
 
-                while(ourNumber >= max) {
-                ourNumber--
-                }
-                while(ourNumber == min) {
-                ourNumber++
-                }
+    let randomNumber =  Math.random() * (max-min) + min;
+    let ourNumber  = Math.round(randomNumber)
 
-                if (playerNumber == ourNumber) {
-                alert('Congratulations! You guessed the number we were thinking of!')
-                } else {
-                alert('Sorry, my number was' + ' ' + ourNumber)
-                }
+    if (playerNumber == ourNumber) {
+      return alert('Congratulations! You guessed the number we were thinking of!')
+    }else{
 
----
+      while(playerNumber !== ourNumber){
+
+        if(playerNumber !== null){
+          return
+        }
+
+        if(playerNumber > ourNumber) {
+            let playerNumber = prompt('Sorry, your number is too high, try again' )
+          }
+
+        if(playerNumber < ourNumber){
+          let playerNumber = prompt('Sorry, your number is too low, try again.')
+          }
+        if(playerNumber == nan){
+          prompt('Please enter a NUMBER')
+        }
+        }
+      }
+  }
+
+____________________________________________________________________________________________________________________________
 
 ### 2: Scrab-Bag
 
@@ -64,7 +77,49 @@ AERETOXMYCNS_B
 1: B, Y, J, K, M, Q, C, Z, _
 0: X
 ```
----
+
+### Solution
+    let letters = {
+      A:9,
+      B:2,
+      C:2,
+      D:4,
+      E:12,
+      F:2,
+      G:3,
+      H:2,
+      I:9,
+      J:1,
+      K:1,
+      L:4,
+      M:2,
+      N:6,
+      O:8,
+      P:2,
+      Q:1,
+      R:6,
+      S:4,
+      T:6,
+      U:4,
+      V:2,
+      W:2,
+      X:1,
+      Y:2,
+      Z:1,
+      _:2
+    }
+
+    let scrabbleBag = ()=> {
+
+      let userTally = prompt('Enter the scrabble tiles that have been played')
+      let userLetters = userTally.toUpperCase()
+
+        for (var i = 0; i < userLetters.length; i++) {
+             letters[userLetters[i]] = letters[userLetters[i]] - 1
+          }
+      return letters
+    }
+____________________________________________________________________________________________________________________________
 
 ### 3: String Indices
 
