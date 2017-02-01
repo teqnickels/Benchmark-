@@ -1,35 +1,44 @@
 // create an object with key value pairs
-// each letter will have a value which is equal to the count of the letters in the bag
-//using prompt, ask the users which letters have already been played
-//it's always subtraction
+//create variables that equal their count
+//when user enters the letters in prompt, set the response to equal -1 and the letter entered to the location to do that operation
 
-var scrabbleBag = {
-  9:'A',
-  2:'B',
-  2:'C',
-  4:'D',
-  12:'E',
-  2:'F',
-  3:'G',
-  2:'H',
-  9:'I',
-  1:'J',
-  1:'K',
-  4:'L',
-  2:'M',
-  6:'N',
-  8:'O',
-  2:'P',
-  1:'Q',
-  6:'R',
-  4:'S',
-  6:'T',
-  4:'U',
-  2:'V',
-  2:'W',
-  1:'X',
-  2:'Y',
-  1:'Z',
-  2:'_'
+let letters = {
+  A:9,
+  B:2,
+  C:2,
+  D:4,
+  E:12,
+  F:2,
+  G:3,
+  H:2,
+  I:9,
+  J:1,
+  K:1,
+  L:4,
+  M:2,
+  N:6,
+  O:8,
+  P:2,
+  Q:1,
+  R:6,
+  S:4,
+  T:6,
+  U:4,
+  V:2,
+  W:2,
+  X:1,
+  Y:2,
+  Z:1,
+  _:2
 }
-var userTally = prompt('Enter the scrabble tiles that have been played in ALL CAPS')
+
+let scrabbleBag = ()=> {
+
+  let userTally = prompt('Enter the scrabble tiles that have been played')
+  let userLetters = userTally.toUpperCase()
+
+    for (var i = 0; i < userLetters.length; i++) {
+         letters[userLetters[i]] = letters[userLetters[i]] - 1
+      }
+  return letters
+}
