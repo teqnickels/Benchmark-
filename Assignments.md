@@ -135,22 +135,24 @@ If you ask for the word at index `7`, your program should return an empty string
 
 ## Solution
 
-        let stringIndices = (userString, userNumber) => {
-            let newArr = []
-            let separate = ""
+            let stringIndices = (userString, userNumber) => {
+                let newArr = []
+                let separate = ""
+                let emptyString = " "
 
-            if( userString.indexOf(" ") == -1 ){
-              let newArr = Array.from(userString)
-              newArr.unshift(" ")
-              return newArr[userNumber]
+                if(userNumber > newArr || userNumber < 0){
+                  return emptyString
+                }else{
+                  if(userString.indexOf(" ") !== -1){
+                    let separate = userString.split(' ')
+                    let newArr = Array.from(separate)
+                    newArr.unshift(" ")
+                    return newArr[userNumber]
+                  }
+
+                }
+
             }
-            if(userString.indexOf(" ") !== -1){
-              let separate = userString.split(' ')
-              let newArr = Array.from(separate)
-              newArr.unshift(" ")
-              return newArr[userNumber]
-            }
-        }
 
 ____________________________________________________________________________________________________________________________
 
