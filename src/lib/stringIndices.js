@@ -2,18 +2,13 @@
 let stringIndices = (userString, userNumber) => {
     let newArr = []
     let separate = ""
-    let emptyString = " "
 
     if(userNumber > newArr || userNumber < 0){
-      return emptyString
-    }else{
-      if(userString.indexOf(" ") !== -1){
-        let separate = userString.split(' ')
-        let newArr = Array.from(separate)
+      return " "
+    }else if(userString.indexOf(" ") !== -1){
+        let finalArr = Array.from(newArr)
         newArr.unshift(" ")
         return newArr[userNumber]
-      }
-
     }
 
 }
