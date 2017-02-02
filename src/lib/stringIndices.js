@@ -1,3 +1,4 @@
+
   let stringIndices = (userString, userNumber) => {
     let newArr = []
     let separate = ""
