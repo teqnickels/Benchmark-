@@ -198,7 +198,16 @@ A string that contains several words to disemvowel. It will consist of all lower
 The disemvowled text with spaces removed.
 
 ## Solution
+
+            let disemvowel = (str) =>{
+
+              var lowerStr = str.toLowerCase()
+              var escapePunct = lowerStr.replace(/[aeiou.,\/#!$%\^&\*;:{}=\-_`~() +?]/g,"")
+
+              return escapePunct
+            }
 ----------------------------------------------------------------------------------------------------------------------------
+
 
 ### 6: Where in the JSON?
 
