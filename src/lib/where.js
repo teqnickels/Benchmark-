@@ -5,7 +5,6 @@ const findThePath = (obj) =>{
   let index = Object.values(json)
   let value = Object.values(jsonStr)
 
-
   jsonStr.forEach(function(jsonStr, index, value){
 
     if( value.hasOwnProperty(value) ){
