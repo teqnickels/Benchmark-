@@ -152,38 +152,6 @@ If you ask for the word at index `7`, your program should return an empty string
 ____________________________________________________________________________________________________________________________
 
 
-### 4: Fibonacci Bases
-
-Binary (base 2) numbers use `1` and `0` to represent the powers of two that can be summed to yield a base 10 (or decimal) result.
-
-For example:
-
-| 16| 8 | 4 | 2 | 1 |
-|---|---|---|---|---|
-| 1 | 0 | 1 | 0 | 1 |
-
-`10101 = 16 + 4 + 1 = 21`
-
-So `10101` is binary for `19`.
-
-The [Fibonacci Sequence](https://en.wikipedia.org/wiki/Fibonacci_number) has a similar property: any positive integer can be written in the form of Fibonacci numbers.
-
-For example:
-
-| 13| 8 | 5 | 3 | 2 | 1 | 1 |
-|---|---|---|---|---|---|---|
-| 1 | 1 | 0 | 0 | 0 | 0 | 0 |
-
-`1100000 = 13 + 8 = 21`
-
-So `1100000` is base Fibonacci for `21`
-
-Write a program that converts from decimal to base Fibonacci and from Fibonacci to decimal.
-
----
-
-
-
 
 ### 5: The Disemvowling
 
@@ -254,6 +222,28 @@ JSON object.
 
 The search path for the string in the format shown above (each element should be joined together with `->` between them.). Each element in the path will either be an integer (if indexing a list) or a string (if indexing an object).
 
+## Solution
+
+            const findThePath = (obj) =>{
+              const data = JSON.stringify(obj)
+              const json = JSON.parse(data)
+              let jsonStr = Object.getOwnPropertyNames(json)
+              let index = Object.values(json)
+              let value = Object.values(jsonStr)
+
+
+              jsonStr.forEach(function(jsonStr, index, value){
+
+                if( value.hasOwnProperty(value) ){
+
+                  let nestedObj = Object.getOwnPropertyNames(value)
+                  console.log(jsonStr + ' -> ' + index + ' -> ' + obj[jsonStr] + 'nestedObj')
+
+                }else{
+                  console.log(jsonStr + ' -> ' + index + ' -> ' + obj[jsonStr])
+                }
+              })
+            }
 ---
 
 ### 7: Who Wants A Date?
