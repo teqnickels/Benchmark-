@@ -9,37 +9,40 @@ When the user types a guess, the program should tell them if they won (the guess
 
 ### Solution:
     let guessTheNumber = () => {
-    let playerNumber = prompt("I'm thinking of a number between 1 and 100. Can you guess the number I'm thinking of?")
+          let playerNumber = prompt("I'm thinking of a number between 1 and 100. Can you guess the number I'm thinking of?")
 
-    const min = 1
-    const max = 100
+          const min = 1
+          const max = 100
 
-    let randomNumber =  Math.random() * (max-min) + min;
-    let ourNumber  = Math.round(randomNumber)
+          let randomNumber =  Math.random() * (max-min) + min;
+          let ourNumber  = Math.round(randomNumber)
 
-    if (playerNumber == ourNumber) {
-      return alert('Congratulations! You guessed the number we were thinking of!')
-    }else{
+          if (playerNumber == ourNumber) {
+             alert('Congratulations! You guessed the number we were thinking of!')
+          }else{
 
-      while(playerNumber !== ourNumber){
+            while(playerNumber !== ourNumber){
 
-        if(playerNumber !== null){
-          return
+              if(playerNumber !== null){
+
+              }
+
+              if(playerNumber > ourNumber) {
+                   playerNumber = prompt('Sorry, your number is too high, try again' )
+                }
+
+              if(playerNumber < ourNumber){
+                 playerNumber = prompt('Sorry, your number is too low, try again.')
+                }
+              if(playerNumber == NaN){
+                prompt('Please enter a NUMBER')
+
+              if(playerNumbe == "exit")
+                return
+                }
+              }
+            }
         }
-
-        if(playerNumber > ourNumber) {
-            let playerNumber = prompt('Sorry, your number is too high, try again' )
-          }
-
-        if(playerNumber < ourNumber){
-          let playerNumber = prompt('Sorry, your number is too low, try again.')
-          }
-        if(playerNumber == nan){
-          prompt('Please enter a NUMBER')
-        }
-        }
-      }
-  }
 
 ____________________________________________________________________________________________________________________________
 
