@@ -37,7 +37,7 @@ When the user types a guess, the program should tell them if they won (the guess
               if(playerNumber == NaN){
                 prompt('Please enter a NUMBER')
 
-              if(playerNumbe == "exit")
+              if(playerNumber == "exit")
                 return
                 }
               }
